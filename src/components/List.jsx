@@ -15,7 +15,7 @@ export const List = ({listado, setListado}) => {
   }
 
   return (
-    <div className='flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center'>
+    <div className='flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pl-4 justify-center'>
 
         {listado.map(item => {
             
