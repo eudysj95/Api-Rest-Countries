@@ -1,13 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useEffect } from 'react'
 import data from "../assets/data.json";
 
-export const List = () => {
+export const List = ({listado, setListado}) => {
+
+  useEffect(() => {
+    conseguirLista();
+  },[])
+
+  const conseguirLista = () => {
+    setListado(data);
+  }
 
   return (
-    <div className='flex flex-wrap justify-center'>
+    <div className='flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center'>
 
-        {data.map(item => {
+        {listado.map(item => {
             
             return(<article key={item.numericCode} className='w-[80%] text-veryDarkBlue mt-2 mb-16 border-2 shadow'>
 
